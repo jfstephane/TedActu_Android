@@ -64,6 +64,27 @@ public class MainActivity extends AppCompatActivity {
                    ft.commit();
                     Toast.makeText(MainActivity.this, "Position 2", Toast.LENGTH_SHORT).show();
                 }
+                else if (newPosition == 2){
+
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.frame, new SearchFragment());
+                    ft.commit();
+                    Toast.makeText(MainActivity.this, "Position 3", Toast.LENGTH_SHORT).show();
+                }
+                else if (newPosition == 3){
+
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.frame, new BookmarksFragment());
+                    ft.commit();
+                    Toast.makeText(MainActivity.this, "Position 4", Toast.LENGTH_SHORT).show();
+                }
+                else if (newPosition == 4){
+
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.frame, new AboutFragment());
+                    ft.commit();
+                    Toast.makeText(MainActivity.this, "Position 5", Toast.LENGTH_SHORT).show();
+                }
 
 
 
@@ -72,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item1 = new BottomItem();
         item1.setMode(BottomItem.DRAWABLE_MODE);
-        item1.setText("Camera");
+        item1.setText("Home");
         item1.setActiveIconResID(getResources().getIdentifier("ic_drawable_camera_fill", "drawable",
                 getApplicationInfo().packageName));
         item1.setInactiveIconResID(getResources().getIdentifier("ic_drawable_camera", "drawable",
@@ -83,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item2 = new BottomItem();
         item2.setMode(BottomItem.DRAWABLE_MODE);
-        item2.setText("Friend");
+        item2.setText("Categories");
         item2.setActiveIconResID(getResources().getIdentifier("ic_drawable_friend_add_fill", "drawable",
                 getApplicationInfo().packageName));
         item2.setInactiveIconResID(getResources().getIdentifier("ic_drawable_friend_add", "drawable",
@@ -94,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item3 = new BottomItem();
         item3.setMode(BottomItem.DRAWABLE_MODE);
-        item3.setText("Like");
+        item3.setText("Search");
         item3.setActiveIconResID(getResources().getIdentifier("ic_drawable_like_fill", "drawable",
                 getApplicationInfo().packageName));
         item3.setInactiveIconResID(getResources().getIdentifier("ic_drawable_like", "drawable",
@@ -105,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item4 = new BottomItem();
         item4.setMode(BottomItem.DRAWABLE_MODE);
-        item4.setText("Recharge");
+        item4.setText("Bookmark");
         item4.setActiveIconResID(getResources().getIdentifier("ic_drawable_recharge_fill", "drawable",
                 getApplicationInfo().packageName));
         item4.setInactiveIconResID(getResources().getIdentifier("ic_drawable_recharge", "drawable",
@@ -116,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item5 = new BottomItem();
         item5.setMode(BottomItem.DRAWABLE_MODE);
-        item5.setText("Time");
+        item5.setText("About");
         item5.setActiveIconResID(getResources().getIdentifier("ic_drawable_time_fill", "drawable",
                 getApplicationInfo().packageName));
         item5.setInactiveIconResID(getResources().getIdentifier("ic_drawable_time", "drawable",
