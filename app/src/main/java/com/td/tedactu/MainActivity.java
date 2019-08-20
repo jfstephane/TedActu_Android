@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +29,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        //Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarMain);
+        setSupportActionBar(toolbar);
+
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menumain, menu);
+        return true;
+    }
+
+
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
@@ -96,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         item1.setText("Home");
         item1.setActiveIconResID(getResources().getIdentifier("ic_drawable_camera_fill", "drawable",
                 getApplicationInfo().packageName));
-        item1.setInactiveIconResID(getResources().getIdentifier("ic_drawable_camera", "drawable",
+        item1.setInactiveIconResID(getResources().getIdentifier("home", "drawable",
                 getApplicationInfo().packageName));
         item1.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item1);
@@ -107,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         item2.setText("Categories");
         item2.setActiveIconResID(getResources().getIdentifier("ic_drawable_friend_add_fill", "drawable",
                 getApplicationInfo().packageName));
-        item2.setInactiveIconResID(getResources().getIdentifier("ic_drawable_friend_add", "drawable",
+        item2.setInactiveIconResID(getResources().getIdentifier("list", "drawable",
                 getApplicationInfo().packageName));
         item2.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item2);
@@ -129,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         item4.setText("Bookmark");
         item4.setActiveIconResID(getResources().getIdentifier("ic_drawable_recharge_fill", "drawable",
                 getApplicationInfo().packageName));
-        item4.setInactiveIconResID(getResources().getIdentifier("ic_drawable_recharge", "drawable",
+        item4.setInactiveIconResID(getResources().getIdentifier("finish", "drawable",
                 getApplicationInfo().packageName));
         item4.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item4);
@@ -140,13 +158,13 @@ public class MainActivity extends AppCompatActivity {
         item5.setText("About");
         item5.setActiveIconResID(getResources().getIdentifier("ic_drawable_time_fill", "drawable",
                 getApplicationInfo().packageName));
-        item5.setInactiveIconResID(getResources().getIdentifier("ic_drawable_time", "drawable",
+        item5.setInactiveIconResID(getResources().getIdentifier("information", "drawable",
                 getApplicationInfo().packageName));
         item5.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item5);
         mBnbDrawableModeList.add(item5);
 
-        mBnbDrawable.setSelectedPosition(2); //Set default selected item
+        mBnbDrawable.setSelectedPosition(0); //Set default selected item
         //mTvBnbDrawableMode.setText("Drawable Mode : " + mBnbDefaultList.get(2).getText());
         mBnbDrawable.initialize();
 
