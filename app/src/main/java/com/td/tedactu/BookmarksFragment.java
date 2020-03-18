@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class BookmarksFragment extends Fragment {
     // The onCreateView method is called when Fragment should create its View object hierarchy,
@@ -19,8 +21,10 @@ public class BookmarksFragment extends Fragment {
     // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        // Setup any handles to view objects here
-        // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
+        WebView webView = view.findViewById(R.id.webViewBookmarks);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://www.youtube.com/channel/UCYwjO810TxGsyEG9ytlRtbQ");
     }
 
 
