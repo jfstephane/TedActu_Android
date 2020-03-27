@@ -1,5 +1,6 @@
 package com.td.tedactu;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
@@ -91,10 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (newPosition == 3){
 
-                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.frame, new BookmarksFragment());
-                    ft.commit();
-                    Toast.makeText(MainActivity.this, "Position 4", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, BookmarksActivity.class);
+                    startActivity(intent);
                 }
                 else if (newPosition == 4){
 
@@ -103,9 +102,6 @@ public class MainActivity extends AppCompatActivity {
                     ft.commit();
                     Toast.makeText(MainActivity.this, "Position 5", Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
         });
 
