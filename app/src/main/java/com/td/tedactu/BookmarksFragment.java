@@ -20,28 +20,6 @@ class BookmarksFragment extends YouTubeBaseActivity {
         super.onCreate(bundle);
         setContentView(R.layout.fragment_bookmarks);
 
-        youTubePlayerView = findViewById(R.id.youtubePlayer);
-        btnNext = findViewById(R.id.btnNext);
 
-        youTubePlayerView.initialize(YoutubeConfig.getApiKey(), new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, final YouTubePlayer youTubePlayer, boolean b)
-            {
-                youTubePlayer.loadPlaylist(firstPlaylist);
-
-                btnNext.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        youTubePlayer.loadPlaylist(secondPlaylist);
-                    }
-                });
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
-            }
-        });
     }
 }
