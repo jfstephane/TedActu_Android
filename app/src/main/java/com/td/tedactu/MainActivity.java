@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         mBnbDrawable.addItem(item5);
         mBnbDrawableModeList.add(item5);
 
-        mBnbDrawable.setSelectedPosition(1); //Set default selected item
+        mBnbDrawable.setSelectedPosition(0); //Set default selected item
         //mTvBnbDrawableMode.setText("Drawable Mode : " + mBnbDefaultList.get(2).getText());
         mBnbDrawable.initialize();
 

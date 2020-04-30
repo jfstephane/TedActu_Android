@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>
+
 {
     private Context context;
     private List<ModelPost> postList;
