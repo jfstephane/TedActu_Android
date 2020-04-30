@@ -14,5 +14,16 @@
     <color name="favorites">#E91E63</color>
     <color name="settings">#4CAF50</color>
 
+    <color name="politique">#79060b</color>
+    <color name="sport">#00F2ff</color>
+    <color name="culture">#3c8929</color>
+    <color name="anket">#000000</color>
+    <color name="societe">#7e028d</color>
+    <color name="savoirplus">#e9b720</color>
+    <color name="jaunelogo">#f47920</color>
+    <color name="bleu">#181e6c</color>
+
+
+
 
 </resources>
