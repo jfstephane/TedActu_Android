@@ -5,11 +5,25 @@
     android:layout_width="match_parent"
     android:layout_margin="10dp">
 
-    <view
-        android:id="@+id/youtubePlayerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="4dp"
-        class="com.google.android.youtube.player.YouTubeThumbnailView"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/videoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Video Title"
+                    android:gravity="center" />
+
+                <view
+                    android:id="@+id/youtubePlayerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/videoTitle"
+                    android:layout_margin="20dp"
+                    class="com.google.android.youtube.player.YouTubeThumbnailView"/>
+
+        </RelativeLayout>
 
 </android.support.v7.widget.CardView>

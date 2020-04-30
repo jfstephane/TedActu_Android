@@ -8,23 +8,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
+import com.td.tedactu.models.Thumbnail;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHolder>
 {
-    ArrayList<String> videoIds;
+    ArrayList<Thumbnail> videoIds;
     Context mContext;
 
-    public YoutubeAdapter(ArrayList<String> videoIds, Context mContext) {
+    public YoutubeAdapter(ArrayList<Thumbnail> videoIds, Context mContext) {
         this.videoIds = videoIds;
         this.mContext = mContext;
     }
@@ -32,13 +31,12 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.youtube_item, viewGroup, false);
-        return new ViewHolder(view);
+        return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.youtube_item,viewGroup,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
-        final String id = videoIds.get(i);
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        final Thumbnail thumbnail = videoIds.get(i);
 
         final ProgressDialog progressDialog;
         progressDialog = new ProgressDialog(mContext);
@@ -47,13 +45,14 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
-        viewHolder.youTubePlayerView.initialize(YoutubeConfig.getApiKey(), new YouTubeThumbnailView.OnInitializedListener() {
+        viewHolder.tvTitle.setText(thumbnail.getTitle());
+
+        viewHolder.youTubeThumbnailView.setImageResource(R.drawable.ic_launcher_foreground);
+
+        viewHolder.youTubeThumbnailView.initialize(YoutubeConfig.getApiKey(), new YouTubeThumbnailView.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubeThumbnailView youTubeThumbnailView, final YouTubeThumbnailLoader youTubeThumbnailLoader) {
-
-
-
-                youTubeThumbnailLoader.setVideo(id);
+                youTubeThumbnailLoader.setVideo(thumbnail.getId());
                 youTubeThumbnailLoader.setOnThumbnailLoadedListener(new YouTubeThumbnailLoader.OnThumbnailLoadedListener() {
                     @Override
                     public void onThumbnailLoaded(YouTubeThumbnailView youTubeThumbnailView, String s) {
@@ -80,7 +79,7 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
             public void onClick(View v)
             {
                 Intent playerIntent = new Intent(mContext, PlayerActivity.class);
-                playerIntent.putExtra("videoID", id);
+                playerIntent.putExtra("videoID", thumbnail.getId());
                 mContext.startActivity(playerIntent);
             }
         });
@@ -91,14 +90,18 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
         return videoIds.size();
     }
 
-   public class ViewHolder extends RecyclerView.ViewHolder
-   {
-       YouTubeThumbnailView youTubePlayerView;
 
-       public ViewHolder(@NonNull View itemView) {
-           super(itemView);
+    public class ViewHolder extends RecyclerView.ViewHolder
+    {
+        YouTubeThumbnailView youTubeThumbnailView;
+        TextView tvTitle;
 
-           youTubePlayerView = itemView.findViewById(R.id.youtubePlayerView);
-       }
-   }
+        public ViewHolder(@NonNull View itemView)
+        {
+            super(itemView);
+
+            youTubeThumbnailView = itemView.findViewById(R.id.youtubePlayerView);
+            tvTitle = itemView.findViewById(R.id.videoTitle);
+        }
+    }
 }
