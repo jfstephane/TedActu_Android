@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:id="@+id/container"
     android:layout_margin="8dp"
-    android:padding="5dp">
+    android:padding="5dp"
+    android:gravity="center"
+    android:layout_gravity="center">
 
     <TextView
         android:id="@+id/titleArticle"
@@ -17,10 +19,12 @@
         android:textStyle="bold"/>
 
     <ImageView
+
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:id="@+id/ivArticle"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/titleArticle"
-        android:background="@color/colorPrimaryDark"/>
+        />
 
 </RelativeLayout>

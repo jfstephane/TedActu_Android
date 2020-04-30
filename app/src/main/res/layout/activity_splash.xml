@@ -5,15 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".SplashActivity"
+    android:background="#071D4B">
 
 
-
+<!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/splash"
         android:layout_centerInParent="true"
         android:src="@drawable/logo"/>
+        -->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash"
+        />
 
 </RelativeLayout>

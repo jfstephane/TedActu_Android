@@ -39,7 +39,7 @@
     android:layout_height="match_parent"
     android:layout_below="@+id/toolbarMain"
     android:layout_above="@id/bnb_drawable"
-    android:id="@+id/frame"/>
+    android:id="@+id/frame" />
 
 
     <com.vincent.bottomnavigationbar.BottomNavigationBar

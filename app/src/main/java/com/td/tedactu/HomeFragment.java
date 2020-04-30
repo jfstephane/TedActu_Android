@@ -45,7 +45,9 @@ public class HomeFragment extends Fragment {
     Map<String, Object> mapSizes;
     Map<String, Object> mapRealSize;
 
-    public String baseURL = "http://ted.policite.org";
+    public String baseURL = "https://tedactu.com";
+
+    //public String baseURL = "http://ted.policite.org";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
@@ -91,6 +93,7 @@ public class HomeFragment extends Fragment {
                     tempdetails = tempdetails.replace("<p>","");
                     tempdetails = tempdetails.replace("</p>","");
                     tempdetails = tempdetails.replace("[&hellip;]","");
+                    tempdetails = tempdetails.replace("&#8217","'");
 
                     postArrayList.add(new ModelPost(ModelPost.IMAGE_TYPE, response.body().get(i).getTitle().getRendered(),
                             tempdetails,
