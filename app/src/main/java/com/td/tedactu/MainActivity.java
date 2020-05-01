@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
         BottomItem item1 = new BottomItem();
         item1.setMode(BottomItem.DRAWABLE_MODE);
         item1.setText("Home");
-        item1.setActiveIconResID(getResources().getIdentifier("ic_drawable_camera_fill", "drawable",
+        item1.setActiveIconResID(getResources().getIdentifier("feedsel", "drawable",
                 getApplicationInfo().packageName));
-        item1.setInactiveIconResID(getResources().getIdentifier("home", "drawable",
+        item1.setInactiveIconResID(getResources().getIdentifier("feed", "drawable",
                 getApplicationInfo().packageName));
         item1.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item1);
@@ -119,9 +119,9 @@ public class MainActivity extends AppCompatActivity {
         BottomItem item2 = new BottomItem();
         item2.setMode(BottomItem.DRAWABLE_MODE);
         item2.setText("Categories");
-        item2.setActiveIconResID(getResources().getIdentifier("ic_drawable_friend_add_fill", "drawable",
+        item2.setActiveIconResID(getResources().getIdentifier("categoriessel", "drawable",
                 getApplicationInfo().packageName));
-        item2.setInactiveIconResID(getResources().getIdentifier("list", "drawable",
+        item2.setInactiveIconResID(getResources().getIdentifier("categories", "drawable",
                 getApplicationInfo().packageName));
         item2.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item2);
@@ -129,10 +129,10 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item3 = new BottomItem();
         item3.setMode(BottomItem.DRAWABLE_MODE);
-        item3.setText("Search");
-        item3.setActiveIconResID(getResources().getIdentifier("ic_drawable_like_fill", "drawable",
+        item3.setText("Gallery");
+        item3.setActiveIconResID(getResources().getIdentifier("gallerysel", "drawable",
                 getApplicationInfo().packageName));
-        item3.setInactiveIconResID(getResources().getIdentifier("ic_drawable_like", "drawable",
+        item3.setInactiveIconResID(getResources().getIdentifier("gallery", "drawable",
                 getApplicationInfo().packageName));
         item3.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item3);
@@ -140,10 +140,10 @@ public class MainActivity extends AppCompatActivity {
 
         BottomItem item4 = new BottomItem();
         item4.setMode(BottomItem.DRAWABLE_MODE);
-        item4.setText("Bookmark");
-        item4.setActiveIconResID(getResources().getIdentifier("ic_drawable_recharge_fill", "drawable",
+        item4.setText("Videos");
+        item4.setActiveIconResID(getResources().getIdentifier("videosel", "drawable",
                 getApplicationInfo().packageName));
-        item4.setInactiveIconResID(getResources().getIdentifier("finish", "drawable",
+        item4.setInactiveIconResID(getResources().getIdentifier("video", "drawable",
                 getApplicationInfo().packageName));
         item4.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item4);
@@ -152,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
         BottomItem item5 = new BottomItem();
         item5.setMode(BottomItem.DRAWABLE_MODE);
         item5.setText("About");
-        item5.setActiveIconResID(getResources().getIdentifier("ic_drawable_time_fill", "drawable",
+        item5.setActiveIconResID(getResources().getIdentifier("aboutsel", "drawable",
                 getApplicationInfo().packageName));
-        item5.setInactiveIconResID(getResources().getIdentifier("information", "drawable",
+        item5.setInactiveIconResID(getResources().getIdentifier("about", "drawable",
                 getApplicationInfo().packageName));
         item5.setActiveTextColor(Color.parseColor("#FC7823"));
         mBnbDrawable.addItem(item5);
