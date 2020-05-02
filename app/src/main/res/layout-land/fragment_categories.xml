@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp"
     android:background="@drawable/portaitbg">
 
     <!--
@@ -19,7 +18,8 @@
     <ImageView
         android:id="@+id/imgsociete"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:src="@drawable/societe"/>
@@ -30,43 +30,46 @@
         android:layout_marginLeft="10dp"
         android:id="@+id/imgpolitique"
         android:onClick="onPolitique"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:src="@drawable/politique"/>
 
     <ImageView
-        android:layout_below="@+id/imgsociete"
+        android:layout_toRightOf="@id/imgpolitique"
         android:id="@+id/imgculture"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:src="@drawable/culture"/>
 
     <ImageView
-        android:layout_toRightOf="@+id/imgculture"
+
         android:layout_marginLeft="10dp"
-        android:layout_below="@id/imgpolitique"
+        android:layout_below="@id/imgsociete"
         android:id="@+id/imgsport"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:src="@drawable/sport"/>
 
     <ImageView
-        android:layout_below="@id/imgculture"
+        android:layout_toRightOf="@id/imgsport"
+        android:layout_below="@id/imgpolitique"
         android:id="@+id/imgsavoirplus"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:src="@drawable/savoir"/>
 
     <ImageView
         android:layout_toRightOf="@+id/imgsavoirplus"
         android:layout_marginLeft="10dp"
-        android:layout_below="@+id/imgsport"
+        android:layout_below="@+id/imgculture"
         android:id="@+id/imganket"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:src="@drawable/anket"/>
 
