@@ -12,6 +12,13 @@ public class ListCategories extends Fragment {
 
 
     ImageView imgPolitique;
+    ImageView imgSociete;
+    ImageView imgCulture;
+    ImageView imgSport;
+    ImageView imgSavoirPLus;
+    ImageView imgAnket;
+    ImageView imgGallery;
+
 
     // The onCreateView method is called when Fragment should create its View object hierarchy,
     // either dynamically or via XML layout inflation.
@@ -29,6 +36,69 @@ public class ListCategories extends Fragment {
                 // Do something
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.frame, new PolitiqueFragment());
+                ft.commit();
+            }
+        });
+
+        imgSociete =view.findViewById(R.id.imgsociete);
+        imgSociete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new SocieteFragment());
+                ft.commit();
+            }
+        });
+
+
+        imgCulture =view.findViewById(R.id.imgculture);
+        imgCulture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new CultureFragment());
+                ft.commit();
+            }
+        });
+
+
+        imgSport =view.findViewById(R.id.imgsport);
+        imgSport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new SportFragment());
+                ft.commit();
+            }
+        });
+
+        imgSavoirPLus =view.findViewById(R.id.imgsavoirplus);
+        imgSavoirPLus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new SavoirPlusFragment());
+                ft.commit();
+            }
+        });
+
+
+        imgAnket =view.findViewById(R.id.imganket);
+        imgAnket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new AnketFragment());
                 ft.commit();
             }
         });
