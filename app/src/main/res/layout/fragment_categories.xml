@@ -16,13 +16,7 @@
         android:id="@+id/recycler_view_categories"/>
         -->
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/framecategories">
 
-
-    </FrameLayout>
 
     <ImageView
         android:id="@+id/imgsociete"

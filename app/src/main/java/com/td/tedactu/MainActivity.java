@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (newPosition == 1){
 
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.frame, new CategoriesFragment());
+                    ft.replace(R.id.frame, new ListCategories());
                    ft.commit();
                     Toast.makeText(MainActivity.this, "Position 2", Toast.LENGTH_SHORT).show();
                 }
