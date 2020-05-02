@@ -47,8 +47,8 @@ public class PolitiqueFragment extends Fragment {
         // Defines the xml file for the fragment
         View view = inflater.inflate(R.layout.fragment_politique, parent, false);
 
-        recyclerView = view.findViewById(R.id.recycler_view);
-        //progressBar = view.findViewById(R.id.progressBar);
+        recyclerView = view.findViewById(R.id.rvpolitique);
+        progressBar = view.findViewById(R.id.pbpolitique);
 
         linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);

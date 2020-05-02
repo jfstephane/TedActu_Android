@@ -25,7 +25,7 @@ public class CategoriesFragment extends Fragment {
             public void onClick(View view)
             {
                 // Do something
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.framecategories, new PolitiqueFragment());
                 ft.commit();
             }
@@ -48,9 +48,12 @@ public class CategoriesFragment extends Fragment {
         ft.commit();
     }*/
 
+   /*
     private FragmentManager getSupportFragmentManager() {
         return null;
     }
+
+    */
 
 
 }

@@ -2,6 +2,7 @@ package com.td.tedactu;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -59,6 +60,20 @@ public class HomeFragment extends Fragment {
 
         linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+        //GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        //recyclerView.setLayoutManager(manager);
+
+/*
+        if(getOrientation() == HORIZONTAL){
+            layoutParams.width = (int) Math.round(getHorizontalSpace() / (double) getItemCount());
+        }
+        else if(getOrientation() == VERTICAL){
+            layoutParams.height = (int) Math.round(getVerticalSpace() /  (double) getItemCount());
+        }
+
+
+ */
 
         postArrayList = new ArrayList<>();
 

@@ -1,8 +1,11 @@
 package com.td.tedactu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +15,7 @@ public class Post extends AppCompatActivity {
     TextView title;
     ImageView image;
     TextView content;
+    Button share;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +25,31 @@ public class Post extends AppCompatActivity {
         final String titleString = getIntent().getExtras().getString("title");
         final String imageString = getIntent().getExtras().getString("image");
         final String contentString = getIntent().getExtras().getString("content");
+        final String linkString = getIntent().getExtras().getString("link");
 
         title = findViewById(R.id.title);
         image = findViewById(R.id.imageDetails);
         content = findViewById(R.id.content);
+        share = findViewById(R.id.share);
 
         title.setText(titleString);
         content.setText(contentString);
 
         Picasso.get().load(imageString).placeholder(R.drawable.ic_drawable_camera_fill).into(image);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = linkString;
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share using"));
+            }
+        });
+
+
     }
 
 
