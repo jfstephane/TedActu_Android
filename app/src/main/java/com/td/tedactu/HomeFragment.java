@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment {
                     tempdetails = tempdetails.replace("<p>","");
                     tempdetails = tempdetails.replace("</p>","");
                     tempdetails = tempdetails.replace("[&hellip;]","");
-                    tempdetails = tempdetails.replace("&#8217","'");
+                    tempdetails = tempdetails.replace("&#8217","");
 
                     postArrayList.add(new ModelPost(ModelPost.IMAGE_TYPE, response.body().get(i).getTitle().getRendered(),
                             tempdetails,
