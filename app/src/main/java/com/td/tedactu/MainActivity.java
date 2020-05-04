@@ -13,7 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vincent.bottomnavigationbar.BottomItem;
@@ -112,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (newPosition == 2){
 
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.frame, new SearchFragment());
+                    ft.replace(R.id.frame, new GalleryFragment());
                     ft.commit();
                     Toast.makeText(MainActivity.this, "Position 3", Toast.LENGTH_SHORT).show();
                 }
