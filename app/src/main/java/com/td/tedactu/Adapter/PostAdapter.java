@@ -64,6 +64,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>
             {
                 Intent intent = new Intent(context, Post.class);
                 intent.putExtra("title", object.title);
+                intent.putExtra("link", object.link);
                 intent.putExtra("image", object.image);
                 intent.putExtra("content", object.subtitle);
                 context.startActivity(intent);

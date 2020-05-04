@@ -96,7 +96,9 @@ public class AnketFragment extends Fragment {
                     tempdetails = tempdetails.replace("[&hellip;]","");
                     tempdetails = tempdetails.replace("&#8217","");
 
-                    postArrayList.add(new ModelPost(ModelPost.IMAGE_TYPE, response.body().get(i).getTitle().getRendered(),
+                    postArrayList.add(new ModelPost(ModelPost.IMAGE_TYPE,
+                            response.body().get(i).getLink(),
+                            response.body().get(i).getTitle().getRendered(),
                             tempdetails,
                             response.body().get(i).getEmbedded().getWpFeaturedmedia().get(0).getMediaDetails().getSizes().getFull().getSourceUrl()));
                 }

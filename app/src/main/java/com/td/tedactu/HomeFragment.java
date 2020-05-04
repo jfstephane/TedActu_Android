@@ -2,7 +2,7 @@ package com.td.tedactu;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,11 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.td.tedactu.Adapter.PostAdapter;
 import com.td.tedactu.Api.RetrofitArrayApi;
@@ -25,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import am.appwise.components.ni.NoInternetDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,6 +32,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private LinearLayoutManager linearLayoutManager;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     private ArrayList<ModelPost> postArrayList;
     private PostAdapter postAdapter;
@@ -47,6 +44,7 @@ public class HomeFragment extends Fragment {
     Map<String, Object> mapRealSize;
 
     public String baseURL = "https://tedactu.com";
+    private NoInternetDialog noInternetDialog;
 
     //public String baseURL = "http://ted.policite.org";
 
@@ -57,6 +55,10 @@ public class HomeFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         progressBar = view.findViewById(R.id.progressBar);
+        swipeRefreshLayout = view.findViewById(R.id.swipeRefresh);
+
+        noInternetDialog = new NoInternetDialog.Builder(getContext()).build();
+
 
         linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -78,6 +80,19 @@ public class HomeFragment extends Fragment {
         postArrayList = new ArrayList<>();
 
         getRetrofit();
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getRetrofit();
+            }
+        });
+
+        // Configure the refreshing colors
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
 
         postAdapter = new PostAdapter(getContext(), postArrayList);
 
@@ -104,18 +119,21 @@ public class HomeFragment extends Fragment {
                 for (int i = 0; i < response.body().size(); i++) {
                     response.body().get(i).getId();
 
-                    String tempdetails = response.body().get(i).getExcerpt().getRendered();
+                    String tempdetails = response.body().get(i).getContent().getRendered();
                     tempdetails = tempdetails.replace("<p>","");
                     tempdetails = tempdetails.replace("</p>","");
                     tempdetails = tempdetails.replace("[&hellip;]","");
                     tempdetails = tempdetails.replace("&#8217","");
 
-                    postArrayList.add(new ModelPost(ModelPost.IMAGE_TYPE, response.body().get(i).getTitle().getRendered(),
+                    postArrayList.add(new ModelPost(ModelPost.IMAGE_TYPE,
+                            response.body().get(i).getLink(),
+                            response.body().get(i).getTitle().getRendered(),
                             tempdetails,
                             response.body().get(i).getEmbedded().getWpFeaturedmedia().get(0).getMediaDetails().getSizes().getFull().getSourceUrl()));
                 }
 
                 postAdapter.notifyDataSetChanged();
+                swipeRefreshLayout.setRefreshing(false);
             }
 
             @Override
@@ -126,10 +144,10 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onStart()
-    {
-        super.onStart();
+    public void onDestroy() {
+        super.onDestroy();
 
+        noInternetDialog.onDestroy();
     }
 
     @Override
