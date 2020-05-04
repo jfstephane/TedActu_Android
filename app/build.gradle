@@ -62,4 +62,5 @@ dependencies {
     implementation 'com.loopj.android:android-async-http:1.4.10'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'am.appwise.components:NoInternetDialog:1.1.3'
 }

@@ -8,6 +8,7 @@
     android:layout_gravity="center"
     android:background="@drawable/portaitbg">
 
+
     <include
 
         layout="@layout/toolbarmain"
@@ -15,8 +16,14 @@
 
         />
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/incl"
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <RelativeLayout
-        android:layout_below="@+id/incl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center">
@@ -34,5 +41,10 @@
             android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
+
+
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>
