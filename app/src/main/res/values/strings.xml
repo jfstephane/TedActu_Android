@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TedActu</string>
+    <string name="search_hint">search_hint</string>
 </resources>

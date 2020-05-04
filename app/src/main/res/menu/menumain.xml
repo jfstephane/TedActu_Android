@@ -7,6 +7,7 @@
     android:icon="@drawable/loupe"
     android:title="Search"
     app:iconTint="@android:color/white"
+        app:actionViewClass="android.support.v7.widget.SearchView"
     app:showAsAction="always" />
 
     <item
