@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/toolbarfrag"
+        android:id="@+id/inclfrag"
+
+        />
+
+
+    <ScrollView
+        android:layout_below="@id/inclfrag"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/ivfantom1" />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom1"
+        android:id="@+id/ivfantom2" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom2"
+        android:id="@+id/ivfantom3" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom3"
+        android:id="@+id/ivfantom4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom4"
+        android:id="@+id/ivfantom5" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom5"
+        android:id="@+id/ivfantom6" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom6"
+        android:id="@+id/ivfantom7" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivfantom7"
+        android:id="@+id/ivfantom8" />
+
+
+</RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -25,10 +25,14 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View view)
             {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new FantomFragment());
+                ft.commit();
 
-                Intent intent = new Intent(getContext(), BookmarksActivity.class);
+                //Intent intent = new Intent(getContext(), BookmarksActivity.class);
                 //overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-                startActivity(intent);
+                //startActivity(intent);
             }
         });
 
