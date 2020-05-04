@@ -13,9 +13,11 @@
         android:layout_height="50dp"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
-        android:id="@+id/toolbarMain"
+        android:id="@+id/toolbarfrag"
         android:background="#071D4B"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:theme="@style/ToolbarTheme">
 
         <RelativeLayout
             android:layout_width="match_parent"

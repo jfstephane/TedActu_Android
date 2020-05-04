@@ -4,7 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include
+        layout="@layout/toolbarmain"
+        android:id="@+id/incllist"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
     <FrameLayout
+       android:layout_below="@id/incllist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/framecategories">

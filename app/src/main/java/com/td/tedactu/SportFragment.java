@@ -2,8 +2,10 @@ package com.td.tedactu;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +34,7 @@ public class SportFragment extends Fragment {
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private LinearLayoutManager linearLayoutManager;
+    Toolbar toolbar;
 
     private ArrayList<ModelPost> postArrayList;
     private PostAdapter postAdapter;
@@ -64,9 +67,30 @@ public class SportFragment extends Fragment {
 
         recyclerView.setAdapter(postAdapter);
 
+
+        toolbar = view.findViewById(R.id.toolbarfrag);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //getActivity().onBackPressed();
+                Backpresses();
+            }
+        });
+
+
+
         return view;
 
 
+    }
+
+
+    private void Backpresses() {
+        //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contant_main, new Home()).commit();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.frame, new ListCategories());
+        ft.commit();
     }
 
 

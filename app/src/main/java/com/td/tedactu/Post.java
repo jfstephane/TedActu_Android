@@ -3,6 +3,7 @@ package com.td.tedactu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class Post extends AppCompatActivity {
     ImageView image;
     TextView content;
     Button share;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,17 @@ public class Post extends AppCompatActivity {
         image = findViewById(R.id.imageDetails);
         content = findViewById(R.id.content);
         share = findViewById(R.id.share);
+
+        toolbar = findViewById(R.id.toolbarfrag);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+
+            }
+        });
+
 
         title.setText(titleString);
         content.setText(contentString);

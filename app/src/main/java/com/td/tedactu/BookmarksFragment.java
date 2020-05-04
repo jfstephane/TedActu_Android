@@ -18,7 +18,7 @@ class BookmarksFragment extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.layout.fragment_bookmarks);
+        //setContentView(R.layout.fragment_bookmarks);
 
 
     }

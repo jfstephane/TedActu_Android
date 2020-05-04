@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -25,6 +27,7 @@ public class BookmarksActivity extends YouTubeBaseActivity
     YoutubeAdapter youtubeAdapter;
     ArrayList<Thumbnail> videoIds;
     public static String title;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle bundle) {
@@ -44,6 +47,17 @@ public class BookmarksActivity extends YouTubeBaseActivity
 
         recyclerView.setLayoutManager(new LinearLayoutManager(BookmarksActivity.this));
         recyclerView.setAdapter(youtubeAdapter);
+
+
+        toolbar = findViewById(R.id.toolbarfrag);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+
+            }
+        });
     }
 
 //    public String getVideoTitle(String id)
@@ -75,7 +89,7 @@ public class BookmarksActivity extends YouTubeBaseActivity
 //        });
 //        return title;
 //    }
-
+/*
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -83,6 +97,8 @@ public class BookmarksActivity extends YouTubeBaseActivity
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
+
+ */
 
 
 }
