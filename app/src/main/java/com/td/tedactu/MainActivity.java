@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (newPosition == 3){
 
                     Intent intent = new Intent(MainActivity.this, BookmarksActivity.class);
+                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                     startActivity(intent);
                 }
                 else if (newPosition == 4){
