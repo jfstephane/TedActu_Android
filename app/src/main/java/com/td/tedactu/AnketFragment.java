@@ -1,8 +1,10 @@
 package com.td.tedactu;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -56,8 +58,21 @@ public class AnketFragment extends Fragment {
         recyclerView = view.findViewById(R.id.rvanket);
         progressBar = view.findViewById(R.id.pbanket);
 
-        linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        //linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        //recyclerView.setLayoutManager(linearLayoutManager);
+
+
+        if(getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+
+            linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager);
+
+        }
+        else{
+
+            GridLayoutManager mLayoutManager = new GridLayoutManager(getContext(),2);
+            recyclerView.setLayoutManager(mLayoutManager);
+        }
 
         postArrayList = new ArrayList<>();
 

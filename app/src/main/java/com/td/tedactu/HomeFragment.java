@@ -1,8 +1,10 @@
 package com.td.tedactu;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -60,22 +62,26 @@ public class HomeFragment extends Fragment {
         noInternetDialog = new NoInternetDialog.Builder(getContext()).build();
 
 
-        linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        //linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        //recyclerView.setLayoutManager(linearLayoutManager);
 
-        //GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        //recyclerView.setLayoutManager(manager);
 
-/*
-        if(getOrientation() == HORIZONTAL){
-            layoutParams.width = (int) Math.round(getHorizontalSpace() / (double) getItemCount());
+        if(getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+
+            linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager);
+
         }
-        else if(getOrientation() == VERTICAL){
-            layoutParams.height = (int) Math.round(getVerticalSpace() /  (double) getItemCount());
+        else{
+
+            GridLayoutManager mLayoutManager = new GridLayoutManager(getContext(),2);
+            recyclerView.setLayoutManager(mLayoutManager);
         }
 
 
- */
+
+
+
 
         postArrayList = new ArrayList<>();
 
