@@ -7,10 +7,94 @@
 
 
    <ImageView
-       android:layout_width="match_parent"
-       android:layout_height="300dp"
-       android:src="@drawable/logo"
-       />
+       android:layout_width="150dp"
+       android:layout_height="150dp"
+       android:id="@+id/ivralph"
+       android:background="#000000"/>
+
+   <TextView
+       android:id="@+id/tvralph"
+       android:layout_width="275dp"
+       android:layout_height="35dp"
+       android:layout_toRightOf="@id/ivralph"
+       android:text="Ralph Teddy Erol"
+       android:textSize="25sp"
+       android:textStyle="bold"
+       android:maxLines="1"
+       android:layout_marginLeft="5dp"/>
+
+   <TextView
+       android:layout_width="275dp"
+       android:layout_height="80dp"
+       android:layout_below="@id/tvralph"
+       android:layout_toRightOf="@id/ivralph"
+       android:layout_marginLeft="5dp"
+       android:id="@+id/bioralph"
+       android:maxLines="3"/>
+
+
+
+
+   <ImageView
+       android:layout_width="150dp"
+       android:layout_height="150dp"
+       android:id="@+id/ivdelano"
+       android:layout_below="@id/ivralph"
+       android:layout_marginTop="5dp"
+       android:background="#000000"/>
+
+   <TextView
+       android:id="@+id/tvdelano"
+       android:layout_width="275dp"
+       android:layout_height="35dp"
+       android:layout_toRightOf="@id/ivdelano"
+       android:layout_below="@id/ivralph"
+       android:text="Phillipe Delanot"
+       android:textSize="25sp"
+       android:textStyle="bold"
+       android:maxLines="1"
+       android:layout_marginLeft="5dp"/>
+
+   <TextView
+       android:layout_width="275dp"
+       android:layout_height="80dp"
+       android:layout_below="@id/tvdelano"
+       android:layout_toRightOf="@id/ivdelano"
+       android:layout_marginLeft="5dp"
+       android:id="@+id/biodelano"
+       android:maxLines="3"/>
+
+
+   <ImageView
+       android:layout_width="150dp"
+       android:layout_height="150dp"
+       android:id="@+id/ivpeterson"
+       android:layout_below="@id/ivdelano"
+       android:layout_marginTop="5dp"
+       android:background="#000000"/>
+
+   <TextView
+       android:id="@+id/tvpeterson"
+       android:layout_width="275dp"
+       android:layout_height="35dp"
+       android:layout_toRightOf="@id/ivpeterson"
+       android:layout_below="@id/ivdelano"
+       android:text="Peterson Noel"
+       android:textSize="25sp"
+       android:textStyle="bold"
+       android:maxLines="1"
+       android:layout_marginLeft="5dp"/>
+
+   <TextView
+       android:layout_width="275dp"
+       android:layout_height="80dp"
+       android:layout_below="@id/tvpeterson"
+       android:layout_toRightOf="@id/ivpeterson"
+       android:layout_marginLeft="5dp"
+       android:id="@+id/biopeterson"
+       android:maxLines="3"/>
+
+
 
 
 
