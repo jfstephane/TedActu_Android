@@ -55,7 +55,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         final ModelPost object = postList.get(i);
 
-        viewHolder.titleText.setText(object.title);
+        //viewHolder.titleText.setText(object.title);
         Picasso.get().load(object.image).placeholder(R.drawable.ic_drawable_camera_fill).into(viewHolder.imageText);
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
