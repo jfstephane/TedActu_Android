@@ -8,6 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import ahmed.easyslider.EasySlider;
+import ahmed.easyslider.SliderItem;
+
 public class ListCategories extends Fragment {
 
 
@@ -26,6 +32,17 @@ public class ListCategories extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         // Defines the xml file for the fragment
         View view =inflater.inflate(R.layout.listcategories, parent, false);
+
+
+
+        EasySlider easySlider = view.findViewById(R.id.slider);
+
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem("title1",R.drawable.anket));
+        sliderItems.add(new SliderItem("title2",R.drawable.culture));
+        sliderItems.add(new SliderItem("title3",R.drawable.sport));
+        sliderItems.add(new SliderItem("title4",R.drawable.societe));
+        easySlider.setPages(sliderItems);
 
 
         imgPolitique =view.findViewById(R.id.imgpolitique);
