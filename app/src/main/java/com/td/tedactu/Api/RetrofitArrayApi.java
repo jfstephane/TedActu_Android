@@ -6,10 +6,11 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Url;
 
 
 public interface RetrofitArrayApi
 {
-    @GET("wp-json/wp/v2/posts?&_embed")
-    Call<List<WPPost>> getPostInfo();
+    @GET
+    Call<List<WPPost>> getPostInfo(@Url String url);
 }

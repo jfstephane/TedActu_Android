@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/TedActu.iml" filepath="$PROJECT_DIR$/TedActu.iml" group="TedActu" />
       <module fileurl="file://$PROJECT_DIR$/TedActu_Android.iml" filepath="$PROJECT_DIR$/TedActu_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/TedActu_Android-app.iml" filepath="$PROJECT_DIR$/app/TedActu_Android-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TedActu_Android_App.iml" filepath="$PROJECT_DIR$/TedActu_Android_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/TedActu_Android_App-app.iml" filepath="$PROJECT_DIR$/app/TedActu_Android_App-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/TedActu_Android_complete.iml" filepath="$PROJECT_DIR$/TedActu_Android_complete.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/TedActu_Android_complete-app.iml" filepath="$PROJECT_DIR$/app/TedActu_Android_complete-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="TedActu/app" />

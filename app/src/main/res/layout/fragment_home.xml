@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +11,6 @@
 
 
     <include
-
         layout="@layout/toolbarmain"
         android:id="@+id/incl"
 
@@ -45,5 +45,32 @@
 
 
     </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="5dp"
+            app:borderWidth="0dp"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@android:drawable/ic_media_previous"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="5dp"
+            app:borderWidth="0dp"
+            android:src="@android:drawable/ic_media_next"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
