@@ -38,10 +38,23 @@ public class BookmarksActivity extends YouTubeBaseActivity
 
         videoIds = new ArrayList<>();
 
+
+        videoIds.add(new Thumbnail("tfr1VOUq1sA","Men pri kèk pwodui premye nesesite an Ayiti (jiyè 2020) | Ted’Actu"));
         videoIds.add(new Thumbnail("UftZhK_9IF0","Abitan koray ak Jerusalem ap rele anmwe pou leta ayisyen"));
         videoIds.add(new Thumbnail("tarRAraOE_o","Asasina, Vòl ak Kidnaping : vil Okay espesyalman « Nan Savann », yon gwo danje ?| Repòtaj Ted’Actu"));
         videoIds.add(new Thumbnail("zzdCFYGLWjk","Retour sur le passage des sélections nationales amputées en terre dominicaine"));
         videoIds.add(new Thumbnail("B2QITLt-lyQ","Plizyè dizèn milye moun debake devan ONU pou mande depa prezidan Jovenel Moise | Ted’Actu"));
+        videoIds.add(new Thumbnail("skOhQGj9xXM","Polisye ki revoke yo pa dakò diskite ak Komisyon CSPN fòme a. Poukisa ? | Ted’Actu"));
+        videoIds.add(new Thumbnail("0eFYsjsMy8M","Vizit lakay yon fanmi 8 moun nan Pòtoprens k ap viv de dlo ak sèl epi k ap manje tè | Ted'Actu"));
+        videoIds.add(new Thumbnail("jfDK58lr65s","Manifestasyon : plizyè militan ap denonse move konpòtman polisye k ap maspinen yo | Ted’Actu"));
+        videoIds.add(new Thumbnail("FRQJF7RJC3w","« Chèf yo tire sou mwen, tout kò m kraze, yo vòlè moto m (…) m pèdi lavi m ». | Ted’Actu"));
+        videoIds.add(new Thumbnail("ndsktMs3DfE","Kèk Dirijan Politik pase al bay soutyen yo nan Baz 47 aprè asasina Badou"));
+        videoIds.add(new Thumbnail("I4c1g6goUpM","Ted’Actu Vlog 001 - Vwayaj nan Chili ak BelO, BIC ak Jeanjean Roosevelt."));
+        videoIds.add(new Thumbnail("Eol8OlOQJOg","Gwoup 17 Pati Politik alye Prezidan Jovenel Moise pran pozisyon l sou jounen 18 novanm nan"));
+        videoIds.add(new Thumbnail("8h8rCrYo_KM","Chita pale ak Eudes Lajoie, Direktè Jeneral Ofis Nasyonal Migrasyon (ONM)"));
+        videoIds.add(new Thumbnail("Y44TdZkmjJo","Mach Petwokaribe Nan Pòtoprens (Dimanch 9 sept 2018)"));
+        videoIds.add(new Thumbnail("n9qf1VK8Al0","Lancement de DEZOD le tout nouveau-né de Power Surge"));
+        videoIds.add(new Thumbnail("O8qVJlSawio","Diskou Prezidan Repiblik la, Jovenel Moïse, nan kad reouvèti lekòl la."));
 
         youtubeAdapter = new YoutubeAdapter(videoIds, BookmarksActivity.this);
 

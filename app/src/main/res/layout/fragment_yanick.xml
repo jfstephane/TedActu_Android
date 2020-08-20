@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/toolbarfrag"
+        android:id="@+id/inclfrag"
+
+        />
+
+
+    <ScrollView
+        android:layout_below="@id/inclfrag"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/ivyanick1" />
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick1"
+                android:id="@+id/ivyanick2" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick2"
+                android:id="@+id/ivyanick3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick3"
+                android:id="@+id/ivyanick4" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick4"
+                android:id="@+id/ivyanick5" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick5"
+                android:id="@+id/ivyanick6" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick6"
+                android:id="@+id/ivyanick7" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick7"
+                android:id="@+id/ivyanick8" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick8"
+                android:id="@+id/ivyanick9" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivyanick9"
+                android:id="@+id/ivyanick10" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

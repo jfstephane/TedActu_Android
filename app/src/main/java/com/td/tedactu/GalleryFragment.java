@@ -13,6 +13,8 @@ public class GalleryFragment extends Fragment {
 
 
     ImageView iv1;
+    ImageView iv2;
+    ImageView iv3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
@@ -21,6 +23,9 @@ public class GalleryFragment extends Fragment {
 
 
         iv1 =view.findViewById(R.id.iv1);
+        iv2 =view.findViewById(R.id.iv2);
+        iv3 =view.findViewById(R.id.iv3);
+
         iv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -36,9 +41,48 @@ public class GalleryFragment extends Fragment {
             }
         });
 
+
+
+        iv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new FiloFragment());
+                ft.commit();
+
+                //Intent intent = new Intent(getContext(), BookmarksActivity.class);
+                //overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                //startActivity(intent);
+            }
+        });
+
+
+        iv3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                // Do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, new YanickFragment());
+                ft.commit();
+
+                //Intent intent = new Intent(getContext(), BookmarksActivity.class);
+                //overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                //startActivity(intent);
+            }
+        });
+
+
+
         return view;
 
     }
+
+
+
+
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

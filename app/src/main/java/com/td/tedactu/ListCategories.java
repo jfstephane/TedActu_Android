@@ -57,7 +57,7 @@ public class ListCategories extends Fragment {
         easySlider.setPages(sliderItems);
 
 
- */
+
 
 
 
@@ -78,7 +78,7 @@ public class ListCategories extends Fragment {
         Timer timer = new Timer();
         //tabLayout.setupWithViewPager(viewPager, true);
         timer.schedule(task,DELAY_MS,PERIOD_MS);
-
+ */
 
 
 

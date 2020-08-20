@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/toolbarfrag"
+        android:id="@+id/inclfrag"
+
+        />
+
+
+    <ScrollView
+        android:layout_below="@id/inclfrag"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/ivfilo1" />
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo1"
+                android:id="@+id/ivfilo2" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo2"
+                android:id="@+id/ivfilo3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo3"
+                android:id="@+id/ivfilo4" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo4"
+                android:id="@+id/ivfilo5" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo5"
+                android:id="@+id/ivfilo6" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo6"
+                android:id="@+id/ivfilo7" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo7"
+                android:id="@+id/ivfilo8" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo8"
+                android:id="@+id/ivfilo9" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ivfilo9"
+                android:id="@+id/ivfilo10" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
