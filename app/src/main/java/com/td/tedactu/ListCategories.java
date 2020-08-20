@@ -3,16 +3,19 @@ package com.td.tedactu;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.sliderviewlibrary.SliderView;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
-import ahmed.easyslider.EasySlider;
-import ahmed.easyslider.SliderItem;
 
 public class ListCategories extends Fragment {
 
@@ -26,6 +29,15 @@ public class ListCategories extends Fragment {
     ImageView imgGallery;
 
 
+
+    ViewPager viewPager;
+    ArrayList<Integer> images = new ArrayList<>();
+    ArrayList<String> Urls = new ArrayList<>();
+    SliderView sliderView;
+    int DELAY_MS=1000,PERIOD_MS=5000;
+    int currentPage=0;
+
+
     // The onCreateView method is called when Fragment should create its View object hierarchy,
     // either dynamically or via XML layout inflation.
     @Override
@@ -34,7 +46,7 @@ public class ListCategories extends Fragment {
         View view =inflater.inflate(R.layout.listcategories, parent, false);
 
 
-
+/*
         EasySlider easySlider = view.findViewById(R.id.slider);
 
         List<SliderItem> sliderItems = new ArrayList<>();
@@ -43,6 +55,31 @@ public class ListCategories extends Fragment {
         sliderItems.add(new SliderItem("title3",R.drawable.sport));
         sliderItems.add(new SliderItem("title4",R.drawable.societe));
         easySlider.setPages(sliderItems);
+
+
+ */
+
+
+
+        sliderView=view.findViewById(R.id.sliderView);
+        //SliderAdapter sliderAdapter = new SliderAdapter(getApplicationContext(),viewPager);
+        images.add(R.drawable.anket);
+        images.add(R.drawable.culture);
+        images.add(R.drawable.nlw2x);
+
+
+        Urls.add("https://cdn140.picsart.com/257737415006202.jpg?c256x256");
+        Urls.add("https://stephanianforum.files.wordpress.com/2015/07/holi-celbration.jpg?w=256&h=256&crop=1");
+        Urls.add("https://static-s.aa-cdn.net/img/ios/1175689019/5f18f297b9258db5c13af41d70309379?v=1");
+        sliderView.setImages(images);
+        //OR
+        //sliderView.setImages(IMAGES);
+        TimerTask task = sliderView.getTimerTask();
+        Timer timer = new Timer();
+        //tabLayout.setupWithViewPager(viewPager, true);
+        timer.schedule(task,DELAY_MS,PERIOD_MS);
+
+
 
 
         imgPolitique =view.findViewById(R.id.imgpolitique);
