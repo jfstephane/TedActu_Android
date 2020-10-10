@@ -111,14 +111,14 @@ public class MainActivity extends AppCompatActivity {
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.frame, new ListCategories());
                    ft.commit();
-                    Toast.makeText(MainActivity.this, "Position 2", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Categories", Toast.LENGTH_SHORT).show();
                 }
                 else if (newPosition == 2){
 
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.frame, new GalleryFragment());
                     ft.commit();
-                    Toast.makeText(MainActivity.this, "Position 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Gallery", Toast.LENGTH_SHORT).show();
                 }
                 else if (newPosition == 3){
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.frame, new AboutFragment());
                     ft.commit();
-                    Toast.makeText(MainActivity.this, "Position 5", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "About", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         mBnbDrawable.addItem(item5);
         mBnbDrawableModeList.add(item5);
 
-        mBnbDrawable.setSelectedPosition(0); //Set default selected item
+        mBnbDrawable.setSelectedPosition(2); //Set default selected item
         //mTvBnbDrawableMode.setText("Drawable Mode : " + mBnbDefaultList.get(2).getText());
         mBnbDrawable.initialize();
 

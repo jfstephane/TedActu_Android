@@ -46,8 +46,9 @@
     android:id="@+id/frame">
 
     <include
-        layout="@layout/fragment_home"
+        layout="@layout/fragment_categories"
         />
+
 
 </FrameLayout>
 

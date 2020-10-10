@@ -4,7 +4,8 @@
     <corners
         android:radius="100dp" />
 
-
+    <solid
+        android:color="#f47920"/>
 
     <!--If your shape requires only one solid color-->
     <!--<solid

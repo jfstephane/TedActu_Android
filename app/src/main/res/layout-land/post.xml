@@ -62,12 +62,14 @@
             android:id="@+id/share"
             android:layout_width="200dp"
             android:layout_height="50dp"
+            android:background="@drawable/shapevideo"
             android:text="Partager" />
 
         <Button
             android:id="@+id/download"
             android:layout_width="200dp"
             android:layout_height="50dp"
+            android:background="@drawable/shapevideo"
             android:text="Telecharger"/>
 
 
